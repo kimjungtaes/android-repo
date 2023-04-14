@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-         dataMap =  mutableMapOf<String,MutableList<String>>()
+        dataMap =  mutableMapOf<String,MutableList<String>>()
         for(i in 1..10){
             dataMap.set("사람${i}", mutableListOf("외국인1","외국인2", "외국인3","외국인4"))
         }

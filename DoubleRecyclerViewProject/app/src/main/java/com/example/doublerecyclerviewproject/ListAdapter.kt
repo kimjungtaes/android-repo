@@ -8,9 +8,6 @@ import com.example.doublerecyclerviewproject.databinding.ItemListBinding
 
 class ListAdapter(val data: MutableMap<String, MutableList<String>>): RecyclerView.Adapter<ListAdapter.CustomViewHolder>(){
 
-
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
        var binding: ItemListBinding = ItemListBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return CustomViewHolder(binding)
@@ -43,6 +40,7 @@ class ListAdapter(val data: MutableMap<String, MutableList<String>>): RecyclerVi
         }
 
     }
+
 
 
 
