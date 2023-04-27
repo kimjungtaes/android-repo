@@ -12,7 +12,6 @@
         android:scaleType="fitXY"
         android:src="@drawable/face_man"/>
 
-
     <TextView
         android:id="@+id/tvName2"
         android:layout_width="wrap_content"

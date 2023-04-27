@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".PlayActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/listbutton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="list"
+                android:minWidth="60dp"
+                android:minHeight="60dp"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/list_24" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/albumImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/music_24"
+                app:civ_border_color="#2196F3"
+                app:civ_border_overlay="true"
+                app:civ_border_width="0dp"
+                tools:ignore="MissingClass" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/albumtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:text="타이틀"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/albumartist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="아티스트"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/playduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:text="00:00" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/totalduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:gravity="right"
+                android:text="00:00" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:padding="25dp">
+
+        <ImageButton
+            android:id="@+id/backmusicbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:contentDescription="next"
+            android:minHeight="48dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/previous_24" />
+
+        <ImageButton
+            android:id="@+id/playbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:contentDescription="play"
+            android:minHeight="48dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/play_24" />
+
+        <ImageButton
+            android:id="@+id/nextmusicbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:contentDescription="next"
+            android:minHeight="48dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/next_24" />
+
+    </LinearLayout>
+
+</LinearLayout>

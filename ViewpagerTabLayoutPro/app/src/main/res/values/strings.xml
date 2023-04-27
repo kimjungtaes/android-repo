@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ViewpagerTabLayoutPro</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deawer_open">Open Drawer</string>
+    <string name="deawer_close">Close Drawer</string>
+
+</resources>

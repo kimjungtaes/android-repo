@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doublerecyclerviewproject.databinding.SubitemListBinding
 
-class ListAdapter2(val data:MutableList<DataSub>):RecyclerView.Adapter<ListAdapter2.CustomViewHolder>() {
+class ListAdapter2(val data:MutableList<DataSub>):RecyclerView.Adapter<ListAdapter.CustomViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.CustomViewHolder {
        val binding: SubitemListBinding = SubitemListBinding.inflate(LayoutInflater.from(parent.context),parent, false)
-        return CustomViewHolder(binding)
+        return CustomViewHolder(Binding)
     }
 
     override fun getItemCount(): Int = data.size

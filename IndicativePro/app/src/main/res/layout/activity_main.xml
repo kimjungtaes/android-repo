@@ -11,6 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="구글앱으로 암시적 인텐트"/>
-            
+
 
 </LinearLayout>
