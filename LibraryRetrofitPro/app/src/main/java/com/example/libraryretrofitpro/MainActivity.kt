@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     val VERSION = 1
     lateinit var binding: ActivityMainBinding
     lateinit var dbHelper: DBHelper
-    var mutableList: MutableList<LibraryData>? =null
+    var mutableList: MutableList<LibraryData>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             loadLibaries()
             binding.recyclerView.adapter = LibraryAdapter(dbHelper.selectAll()!!)
             binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        }else{
+        } else {
 
             binding.recyclerView.adapter = LibraryAdapter(mutableList!!)
             binding.recyclerView.layoutManager = LinearLayoutManager(this)
@@ -76,13 +76,13 @@ class MainActivity : AppCompatActivity() {
                 val latitude = data.XCNTS
                 val longtude = data.YDNTS
                 val libraryData = LibraryData(code, name, phone, address, latitude, longtude)
-               if (dbHelper.insertTBL(libraryData)){
-                Log.e("MainActivity", "입력 성공${libraryData.toString()}")
+                if (dbHelper.insertTBL(libraryData)) {
+                    Log.e("MainActivity", "입력 성공${libraryData.toString()}")
 
-               }else{
-                Log.e("MainActivity", "입력 실패${libraryData.toString()}")
+                } else {
+                    Log.e("MainActivity", "입력 실패${libraryData.toString()}")
 
-               }
+                }
             }
         }
     }//end of showLibrary

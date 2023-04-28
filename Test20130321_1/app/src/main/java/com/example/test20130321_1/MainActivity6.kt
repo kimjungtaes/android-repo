@@ -36,6 +36,7 @@ class MainActivity6 : AppCompatActivity(), View.OnClickListener, OnDateSetListen
         super.onCreate(savedInstanceState)
         binding = ActivityMain6Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
         binding.btnToast.setOnClickListener(this)
         binding.btnData.setOnClickListener(this)
         binding.btnTime.setOnClickListener(this)

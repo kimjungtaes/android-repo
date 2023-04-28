@@ -44,6 +44,7 @@ class DBHelper(val context: Context?, val name: String?, val version: Int) :
         }
         return flag
     }
+
     fun selectAll(): MutableList<LibraryData>? {
         val db: SQLiteDatabase = this.readableDatabase
         var cursor: Cursor? = null
@@ -71,17 +72,18 @@ class DBHelper(val context: Context?, val name: String?, val version: Int) :
         }
         return mutableList
     }
-fun deleteAll(): Boolean{
-    val db: SQLiteDatabase = this.writableDatabase
-    var flag = false
-    try {
-        db.execSQL("delete from libraryTBL")
-        Log.e("DBHelper", "delete   성공")
-        flag = true
-    }catch (e: SQLException){
-        Log.e("DBHelper", "delete 예외발생 ${e.printStackTrace()}")
+
+    fun deleteAll(): Boolean {
+        val db: SQLiteDatabase = this.writableDatabase
+        var flag = false
+        try {
+            db.execSQL("delete from libraryTBL")
+            Log.e("DBHelper", "delete   성공")
+            flag = true
+        } catch (e: SQLException) {
+            Log.e("DBHelper", "delete 예외발생 ${e.printStackTrace()}")
+        }
+        return flag
     }
-    return flag
-}
 }
 

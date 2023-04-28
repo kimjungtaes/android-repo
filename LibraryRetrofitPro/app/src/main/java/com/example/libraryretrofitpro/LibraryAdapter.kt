@@ -1,11 +1,13 @@
 package com.example.libraryretrofitpro
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.libraryretrofitpro.data.Row
 import com.example.libraryretrofitpro.databinding.ItemListBinding
 
-class LibraryAdapter(val libraryList: MutableList<LibraryData>) : RecyclerView.Adapter<LibraryAdapter.RowHolder>() {
+class LibraryAdapter(val libraryList: MutableList<LibraryData>) :
+    RecyclerView.Adapter<LibraryAdapter.RowHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowHolder {
         val itemListBinding =
             ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
