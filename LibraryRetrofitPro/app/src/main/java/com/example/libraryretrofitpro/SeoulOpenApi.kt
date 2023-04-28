@@ -7,12 +7,12 @@ import retrofit2.http.Path
 
 //************************
 //공공 데이터를 가져온 API주소및 암호키등등
-//http://openapi.seoul.go.kr:8088/6c4e436574786f7836304575424570/json/SeoulPublicLibraryInfo/1/5/
+//http://openapi.seoul.go.kr:8088/API/json/SeoulPublicLibraryInfo/1/5/
 //api class
 class SeoulOpenApi {
     companion object{
         val DOMAIN = "http://openapi.seoul.go.kr:8088/"
-        val API_KEY = "6c4e436574786f7836304575424570"
+        val API_KEY = "API"
         val LIST_TOTAL_COUNT = 5
     }
 }
